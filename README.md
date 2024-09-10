@@ -15,8 +15,8 @@ Este repositorio proporciona un archivo `docker-compose.yml` para configurar y e
 1. **Clonar el Repositorio**: Clona este repositorio en tu máquina local.
 
     ```bash
-    git clone <URL del repositorio>
-    cd <nombre del directorio>
+    git clone https://github.com/stormakh/all-docker-db.git
+    cd all-docker-db
     ```
 
 2. **Iniciar los Servicios**: Utiliza el siguiente comando para levantar todos los servicios.
