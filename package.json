@@ -1,19 +1,31 @@
 {
-  "name": "db-containers",
-  "version": "1.0.0",
-  "description": "Docker-compose setup for various databases",
-  "scripts": {
-    "start:all": "docker-compose up -d",
-    "stop:all": "docker-compose down",
-    "start:postgres": "docker-compose up -d postgres",
-    "stop:postgres": "docker-compose stop postgres",
-    "start:mongodb": "docker-compose up -d mongodb",
-    "stop:mongodb": "docker-compose stop mongodb",
-    "start:redis": "docker-compose up -d redis",
-    "stop:redis": "docker-compose stop redis",
-    "start:neo4j": "docker-compose up -d neo4j",
-    "stop:neo4j": "docker-compose stop neo4j"
-  },
-  "author": "Santiago Tormakh",
-  "license": "MIT"
-}
+    "name": "db-containers",
+    "version": "1.0.0",
+    "description": "Docker-compose setup for various databases",
+    "scripts": {
+      "start:all": "docker-compose up -d",
+      "stop:all": "docker-compose down",
+      "start:postgres": "docker-compose up -d postgres",
+      "stop:postgres": "docker-compose stop postgres",
+      "start:mongodb": "docker-compose up -d mongodb",
+      "stop:mongodb": "docker-compose stop mongodb",
+      "start:redis": "docker-compose up -d redis",
+      "stop:redis": "docker-compose stop redis",
+      "start:neo4j": "docker-compose up -d neo4j",
+      "stop:neo4j": "docker-compose stop neo4j",
+      "start:cassandra": "docker-compose up -d cassandra",
+      "stop:cassandra": "docker-compose stop cassandra",
+      "start:objectdb": "docker-compose up -d objectdb",
+      "stop:objectdb": "docker-compose stop objectdb",
+      "cli:postgres": "docker-compose exec postgres psql -U admin -d testdb",
+      "cli:mongodb": "docker-compose exec mongodb mongosh",
+      "cli:redis": "docker-compose exec redis redis-cli",
+      "cli:neo4j": "docker-compose exec neo4j cypher-shell -u neo4j -p test1234",
+      "cli:cassandra": "docker-compose exec cassandra cqlsh",
+      "cli:objectdb": "docker-compose exec objectdb /bin/bash",
+      "delete:all": "docker-compose down -v --remove-orphans"
+    },
+    "author": "Santiago Tormakh",
+    "license": "MIT"
+  }
+  
