@@ -4,11 +4,26 @@ Todas las bases de datos de la materia 'Bases de Datos 2' levantadas con Docker.
 
 ## Configuración de Servicios de Bases de Datos con Docker Compose
 
-Este repositorio proporciona un archivo `docker-compose.yml` para configurar y ejecutar seis bases de datos diferentes: PostgreSQL, MongoDB, Redis, Neo4j, Cassandra y ObjectDB. Este enfoque permite a los estudiantes trabajar con diferentes tecnologías de bases de datos de manera más eficiente y sin necesidad de instalar software adicional, aparte de Docker.
+Este repositorio proporciona un archivo `docker-compose.yaml` para configurar y ejecutar seis bases de datos diferentes: PostgreSQL, MongoDB, Redis, Neo4j, Cassandra y ObjectDB. Este enfoque permite a los estudiantes trabajar con diferentes tecnologías de bases de datos de manera más eficiente y sin necesidad de instalar software adicional, aparte de Docker.
 
 ## Requisitos Previos
 
 - **Docker**: Asegúrate de tener Docker instalado en tu máquina. Puedes descargarlo desde [Docker](https://www.docker.com/get-started).
+
+- **Opcional**: Si tenes Node instalado en tu maquina podes correr los scripts directamente en la terminal con 
+```bash
+npm run <script name>
+```
+
+#### Si *Node* no esta disponible en tu setup
+Podes correr cada base de datos directamente desde tu command line con el docker cli.
+Por ejemplo queremos levantar Redis y entrar al redis-cli, podemos ejecutar
+
+```bash
+docker-compose up -d redis
+docker-compose exec redis redis-cli
+```
+
 
 ## Instrucciones de Uso
 
@@ -19,7 +34,7 @@ Este repositorio proporciona un archivo `docker-compose.yml` para configurar y e
     cd all-docker-db
     ```
 
-2. **Iniciar los Servicios**: Utiliza el siguiente comando para levantar todos los servicios.
+2. **Iniciar los Servicios**: Utiliza el comando para levantar todos los servicios.
 
     ```bash
     docker-compose up -d
