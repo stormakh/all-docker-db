@@ -4,7 +4,7 @@ Todas las bases de datos de la materia 'Bases de Datos 2' levantadas con Docker.
 
 ## Configuración de Servicios de Bases de Datos con Docker Compose
 
-Este repositorio proporciona un archivo `docker-compose.yaml` para configurar y ejecutar seis bases de datos diferentes: PostgreSQL, MongoDB, Redis, Neo4j, Cassandra y ObjectDB. Este enfoque permite a los estudiantes trabajar con diferentes tecnologías de bases de datos de manera más eficiente y sin necesidad de instalar software adicional, aparte de Docker.
+Este repositorio proporciona un archivo `docker compose.yaml` para configurar y ejecutar seis bases de datos diferentes: PostgreSQL, MongoDB, Redis, Neo4j, Cassandra y ObjectDB. Este enfoque permite a los estudiantes trabajar con diferentes tecnologías de bases de datos de manera más eficiente y sin necesidad de instalar software adicional, aparte de Docker.
 
 ## Requisitos Previos
 
@@ -20,8 +20,8 @@ Podes correr cada base de datos directamente desde tu command line con el docker
 Por ejemplo queremos levantar Redis y entrar al redis-cli, podemos ejecutar
 
 ```bash
-docker-compose up -d redis
-docker-compose exec redis redis-cli
+docker compose up -d redis
+docker compose exec redis redis-cli
 ```
 
 
@@ -37,7 +37,7 @@ docker-compose exec redis redis-cli
 2. **Iniciar los Servicios**: Utiliza el comando para levantar todos los servicios.
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
     Esto descargará las imágenes más recientes de PostgreSQL, MongoDB, Redis, Neo4j, Cassandra y ObjectDB, y levantará cada servicio en su contenedor correspondiente.
@@ -45,13 +45,13 @@ docker-compose exec redis redis-cli
 3. **Verificar que los Servicios Están Corriendo**: Ejecuta el siguiente comando para verificar que todos los contenedores estén activos.
 
     ```bash
-    docker-compose ps
+    docker compose ps
     ```
 
 4. **Detener los Servicios**: Para detener todos los servicios, utiliza:
 
     ```bash
-    docker-compose down
+    docker compose down
     ```
 
 ## Información de Conexión para Cada Servicio
@@ -152,7 +152,7 @@ Para aquellos que usan Docker en Windows sin Make, simplemente ejecuta los coman
 **¿Qué hago si encuentro problemas al ejecutar los servicios?**
 - Verifica que Docker esté corriendo: Asegúrate de que el servicio de Docker esté activo.
 - Verifica los puertos en uso: Asegúrate de que los puertos utilizados por los servicios no estén en uso por otras aplicaciones.
-- Verifica los logs: Usa `docker-compose logs` para revisar los registros de cada contenedor.
+- Verifica los logs: Usa `docker compose logs` para revisar los registros de cada contenedor.
 
 **¿Cómo puedo conectarme a cada base de datos?**
 Cada servicio está mapeado a su puerto correspondiente en localhost. Usa las credenciales proporcionadas y los clientes recomendados para cada base de datos.
